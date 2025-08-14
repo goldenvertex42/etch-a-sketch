@@ -7,3 +7,11 @@ for (let i = 0; i < totalCells; i++) {
     cell.classList.add('grid-cell');
     gridContainer.appendChild(cell);
 }
+
+
+
+gridContainer.addEventListener('mouseover', function(e) {
+    if (e.target.classList.contains('grid-cell')) {
+        e.target.style.backgroundColor = 'black';
+    };
+});
