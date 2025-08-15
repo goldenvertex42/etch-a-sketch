@@ -1,7 +1,7 @@
 #grid-container {
     display: flex;
-    width: 960px;
-    height: 960px;
+    width: 1400px;
+    height: 1400px;
     flex-wrap: wrap;
     border: 1px solid black;
 }
