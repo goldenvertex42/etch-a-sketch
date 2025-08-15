@@ -11,9 +11,17 @@ for (let i = 0; i < totalCells; i++) {
 }
 // Event listener that executes a background color change on the element if it has 'grid-cell' class 
 gridContainer.addEventListener('mouseover', function(e) {
+    
+    function generateRandomColor() {
+    let randomNumber = Math.floor(Math.random() * 16777215);
+    let hexColor = randomNumber.toString(16);
+    hexColor = hexColor.padStart(6, '0');
+    return `#${hexColor.toUpperCase()}`;
+    }
+
     if (e.target.classList.contains('grid-cell')) {
-        e.target.style.backgroundColor = 'black';
-    };
+        e.target.style.backgroundColor = generateRandomColor();
+    }
 });
 
 const changeGridButton = document.getElementById("new-grid");
